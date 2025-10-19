@@ -1,5 +1,6 @@
 cd 폴더명          -      Go를 실행하기 전에 “어디서 실행할지” 정할 때 쓰는 명령어입니다.
 go run main.go   →    Go 컴파일러로 main.go 파일을 실행 
+go build  main.go(파일명,패키지경로)  -  이것도 main.go 파일을 만들고 실행시킴
 ls 	  - 폴더 확인
 touch  - 파일에 폴더만들기
 pwd    - 현재파일확인
@@ -7,7 +8,8 @@ pwd    - 현재파일확인
 
 git add     - 변동사항 저장
 git status  - 변동사항이있는지
-git log     - 이력을 순서대로 보여주는거    
+git log     - 이력을 순서대로 보여주는거  
+git log --oneline    -     커밋한게 뜨고 그 커밋의 주소같은게 뜸   
 git commit - 리포지토리에 저장
 git push - 원격리포지트리에 올리는 것
 git pull - 원격리포지트리에 있는것을 가지고 오는 것
@@ -16,7 +18,9 @@ git config --global user.name "you@ID"   -    config list에 user.name 내용을
 
 git checkout (a1a2a3a)   -  해시코드전체 or 7자리 (시점변환)
 git checkout -     이렇게 쓰면 이전브랜치로 다시돌아감
-
+git checkout -b <브랜치명> - 만드면서 그 브랜치로 옮기는거
+git branch - 브랜치들 확인
+git switch <브랜치명> - 원하면 브랜치로 돌아감 
 ----------------------------------------------------------------------------------------------------------------------------------
 
 echo -"출력할  내용" >> 파일명  - 터미널에 출력됨   ex) echo "hello"            hello출력
@@ -32,5 +36,12 @@ git remote remove origin   - 만든 브랜치를 제거
 git commit --amend -m - 최근 커밋한 내용을 바꿔준다  ex) git commit --amend -m "v2"  이런느낌으로 쓰면 최근커밋이 v2로바뀜
 git pull - 원격리포지트리와 로컬리포지트리를 바로 합친다
 git fetch - 원격리포지트리의 최신 커밋 가져오기 (병합은 되지 않음)
-git merge - 가져온 최신 커밋을 로컬리포지트리(내 파일)에 병합
+git merge - 가져온 최신 커밋을 로컬리포지트리(내 파일)에 병합   
 git push -f origin main = “내 로컬 main으로 원격 main 완전히 덮어쓰기" 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+go mod init -   go.mod 파일생성     ex) 실행파일생성 이런느낌?
+git reset  -  이렇게 입력하면  전 커밋이 되기전으로 돌아감 
+cp - 파일(폴더) 를 복사 해주는거 
+ex)  cp hello.txt backup.txt(파일을 복사해서 다른이름으로 파일저장)cp hello.txt ./backup/(헬로파일을 백업 폴더안에 저장)
+git branch <브랜치명> -  새로운 브랜치 생성
